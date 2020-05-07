@@ -1,13 +1,19 @@
 var arregloValores;
 let arregloDistancia;
+let arregloNombrePlanetas;
 var enviarEvaluacion = (e) => {
 	let inputs = [...document.querySelectorAll(".numeracion_planetas")];
     let inputsD = [...document.querySelectorAll(".distancia_planetas")];
+    let inputsN = [...document.querySelectorAll(".nombre_planetas")];
     arregloValores = inputs.map((input) => {
         return parseInt(input.value);
     });
     arregloDistancia = inputsD.map( (distancia) => {
         return distancia.value;
+    });
+    
+    arregloNombrePlanetas = inputsN.map( (nombrePleneta) => {
+        return nombrePleneta.value;
     });
     
     alert("Arreglo creado correctamente");
