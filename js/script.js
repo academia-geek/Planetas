@@ -1,6 +1,6 @@
 var arregloValores;
 let arregloDistancia;
-let arregloNombrePlanetas;
+let arregloNombrePlanetas = [];
 var enviarEvaluacion = (e) => {
 	let inputs = [...document.querySelectorAll(".numeracion_planetas")];
     let inputsD = [...document.querySelectorAll(".distancia_planetas")];
@@ -37,7 +37,18 @@ let filtrarDistancia = (e) => {
     console.log(arregloFiltradoDistancia);
 }
 
+let buscarPlaneta = (e) => {
+    let nombrePlanetaABuscar = prompt("Digite el nombre del planeta a buscar");
+    console.log(nombrePlanetaABuscar);
+    let r = arregloNombrePlanetas.find((nombre) => nombrePlanetaABuscar == nombre );
+    
+    if(r == undefined)
+        alert("No existe el planeta");
+    else
+        alert("El planeta si existe");
+}
 	
 document.querySelector("#btn_enviar_evaluacion").addEventListener("click", enviarEvaluacion);
 document.querySelector("#btn_ordenar_valores").addEventListener("click", ordernarValores);
 document.querySelector("#btn_filtar_distancia").addEventListener("click", filtrarDistancia);
+document.querySelector("#btn_buscar_planeta").addEventListener("click", buscarPlaneta);
