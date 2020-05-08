@@ -52,3 +52,17 @@ document.querySelector("#btn_enviar_evaluacion").addEventListener("click", envia
 document.querySelector("#btn_ordenar_valores").addEventListener("click", ordernarValores);
 document.querySelector("#btn_filtar_distancia").addEventListener("click", filtrarDistancia);
 document.querySelector("#btn_buscar_planeta").addEventListener("click", buscarPlaneta);
+
+
+let matriz = [
+    [3,"Marte", 1000], 
+    [7,6], 
+    [4,3], 
+];
+
+
+let arregloJSON = [
+    {nplaneta: 2, nomplaneta: "Marte", distplaneta : 12000}
+];
+
+arregloJSON.push({nplaneta: 4, nomplaneta: "Jupiter", distplaneta : 120000})
