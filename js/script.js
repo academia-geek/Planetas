@@ -1,7 +1,8 @@
-import Planeta from './clases/Planeta.js';
+import Planeta from "./clases/Planeta.js";
 var arregloValores;
 let arregloDistancia;
 let arregloNombrePlanetas = [];
+let arregloPlanetas = [];
 var enviarEvaluacion = (e) => {
 	let inputs = [...document.querySelectorAll(".numeracion_planetas")];
     let inputsD = [...document.querySelectorAll(".distancia_planetas")];
@@ -54,7 +55,7 @@ document.querySelector("#btn_ordenar_valores").addEventListener("click", orderna
 document.querySelector("#btn_filtar_distancia").addEventListener("click", filtrarDistancia);
 document.querySelector("#btn_buscar_planeta").addEventListener("click", buscarPlaneta);
 
-
+/*
 let matriz = [
     [3,"Marte", 1000], 
     [7,6], 
@@ -71,10 +72,13 @@ arregloJSON.push({nplaneta: 4, nomplaneta: "Jupiter", distplaneta : 120000})
 let marte = new Planeta("marte");
 marte.numero_clasificacion = 2;
 marte.distancia_tierra = 3000;
-marte.suma(3);
-console.log(marte);
+//marte.suma(3);
+//console.log(marte);
 
-/*
+arregloPlanetas.push(marte);
+arregloPlanetas.push(new Planeta("Tierra"));
+console.log(arregloPlanetas)
+
 function suma(n1 = 0, n2 = 1){
     console.log(n1, n2);
 }
