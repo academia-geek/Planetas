@@ -4,6 +4,9 @@ let arregloDistancia;
 let arregloNombrePlanetas = [];
 let arregloPlanetas = [];
 var enviarEvaluacion = (e) => {
+	/**
+     * Arreglos unidimensionales de un solo tipo nativo (enteros, relas y cadenas de texto)
+     */
 	let inputs = [...document.querySelectorAll(".numeracion_planetas")];
     let inputsD = [...document.querySelectorAll(".distancia_planetas")];
     let inputsN = [...document.querySelectorAll(".nombre_planetas")];
@@ -18,6 +21,29 @@ var enviarEvaluacion = (e) => {
         return nombrePleneta.value;
     });
     
+    /**
+     * Llenado de arreglo con objetos de la clase Planeta
+     */
+    for(let x = 7; x <= 5;  x++){
+        console.log(document.getElementById("n_planeta_" + x).value)
+    }
+    
+    
+    let planeta1 = new Planeta();
+    planeta1.distancia_tierra = document.getElementById("d_planeta_1").value;
+    planeta1.nombre = document.getElementById("np_planeta_1").value;
+    planeta1.numero_clasificacion = document.getElementById("n_planeta_1").value;
+    
+    arregloPlanetas.push(planeta1);
+    
+    let planeta2 = new Planeta();
+    planeta2.distancia_tierra = document.getElementById("d_planeta_2").value;
+    planeta2.nombre = document.getElementById("np_planeta_2").value;
+    planeta2.numero_clasificacion = document.getElementById("n_planeta_2").value;
+    
+    arregloPlanetas.push(planeta2);
+    
+    console.log(arregloPlanetas);
     alert("Arreglo creado correctamente");
 }
 
