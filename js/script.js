@@ -1,3 +1,4 @@
+import Planeta from './clases/Planeta.js';
 var arregloValores;
 let arregloDistancia;
 let arregloNombrePlanetas = [];
@@ -66,3 +67,16 @@ let arregloJSON = [
 ];
 
 arregloJSON.push({nplaneta: 4, nomplaneta: "Jupiter", distplaneta : 120000})
+
+let marte = new Planeta("marte");
+marte.numero_clasificacion = 2;
+marte.distancia_tierra = 3000;
+marte.suma(3);
+console.log(marte);
+
+/*
+function suma(n1 = 0, n2 = 1){
+    console.log(n1, n2);
+}
+
+suma(2); */
