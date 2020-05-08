@@ -86,7 +86,7 @@ let buscarPlaneta = (e) => {
     let nombrePlanetaABuscar = prompt("Digite el nombre del planeta a buscar");
     console.log(nombrePlanetaABuscar);
     let r = arregloNombrePlanetas.find((nombre) => nombrePlanetaABuscar == nombre );
-    let rp = arregloPlanetas.find((planeta) => nombrePlanetaABuscar ==  planeta.nombre);
+    let rp = arregloPlanetas.find((planeta) => {return nombrePlanetaABuscar.toLowerCase ==  planeta.nombre.toLowerCase});
     
     if(rp == undefined)
         alert("No existe el planeta");
