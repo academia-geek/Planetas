@@ -72,7 +72,14 @@ let filtrarDistancia = (e) => {
     let arregloFiltradoDistancia = arregloDistancia.filter( (distancia) => {
         return distancia.indexOf("33") >= 0;
     });
+    
+    let planetasConFiltro = arregloPlanetas.filter( (planeta) => {
+        return planeta.distancia_tierra.indexOf("33") >= 0;
+    }) ;
+    
     console.log(arregloFiltradoDistancia);
+    console.log(planetasConFiltro);
+    
 }
 
 let buscarPlaneta = (e) => {
