@@ -24,24 +24,14 @@ var enviarEvaluacion = (e) => {
     /**
      * Llenado de arreglo con objetos de la clase Planeta
      */
-    for(let x = 7; x <= 5;  x++){
-        console.log(document.getElementById("n_planeta_" + x).value)
+    for(let x = 1; x <= 5;  x++){
+        let planeta = new Planeta();
+        planeta.distancia_tierra = document.getElementById(`d_planeta_${x}`).value;
+        planeta.nombre = document.getElementById(`np_planeta_${x}`).value;
+        planeta.numero_clasificacion = document.getElementById(`n_planeta_${x}`).value;
+        
+        arregloPlanetas.push(planeta);
     }
-    
-    
-    let planeta1 = new Planeta();
-    planeta1.distancia_tierra = document.getElementById("d_planeta_1").value;
-    planeta1.nombre = document.getElementById("np_planeta_1").value;
-    planeta1.numero_clasificacion = document.getElementById("n_planeta_1").value;
-    
-    arregloPlanetas.push(planeta1);
-    
-    let planeta2 = new Planeta();
-    planeta2.distancia_tierra = document.getElementById("d_planeta_2").value;
-    planeta2.nombre = document.getElementById("np_planeta_2").value;
-    planeta2.numero_clasificacion = document.getElementById("n_planeta_2").value;
-    
-    arregloPlanetas.push(planeta2);
     
     console.log(arregloPlanetas);
     alert("Arreglo creado correctamente");
